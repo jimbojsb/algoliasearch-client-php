@@ -722,7 +722,7 @@ class SearchIndex
         $allResponses[] = $moveResponse;
 
         if ($replicas) {
-            $allResponses[] = $this->setSettings(array('replicas' => false));
+            $allResponses[] = $this->setSettings(array('replicas' => $replicas));
         }
 
         return new MultiResponse($allResponses);
